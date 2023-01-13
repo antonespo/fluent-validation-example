@@ -1,6 +1,6 @@
 ﻿namespace FluentValidationExample.Models;
 
-public class Address
+internal class Address
 {
     public string Street { get; set; }
     public string City { get; set; }

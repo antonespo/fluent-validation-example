@@ -1,9 +1,8 @@
 ﻿using FluentValidation;
-using FluentValidationExample.Models;
 
 namespace FluentValidationExample.Validators;
 
-public class CustomerValidator : AbstractValidator<Customer>
+internal class CustomerValidator : AbstractValidator<Customer>
 {
     public CustomerValidator(IValidator<Address> addressValidator)
     {
