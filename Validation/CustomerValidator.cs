@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidationExample.Models;
 
 namespace FluentValidationExample.Validators;
 

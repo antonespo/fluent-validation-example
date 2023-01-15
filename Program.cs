@@ -16,10 +16,10 @@ var container = AutofacConfig.Configure();
 using (var scope = container.BeginLifetimeScope())
 {
     //var includedRuleSets = new[] { "*" };
-    //var includedRuleSets = new[] { ValidationRuleSets.BasicValidation };
+    //var includedRuleSets = new[] { ValidationConstants.BasicValidation };
     var excludedRuleSets = new[] { ValidationConstants.AddressValidation };
 
-    //var validatorSelector = ValidatorOptions.Global.ValidatorSelectors.RulesetValidatorSelectorFactory(validationToInclude);
+    //var validatorSelector = ValidatorOptions.Global.ValidatorSelectors.RulesetValidatorSelectorFactory(includedRuleSets);
     var validatorSelector = new RuleSetValidatorSelector(excludedRuleSets);
 
     var customerValidationContext = new ValidationContext<Customer>(customer, propertyChain: null, validatorSelector);
